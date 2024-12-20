@@ -1,0 +1,8 @@
+[build]
+  functions = "netlify/functions"  # Lokasi tempat fungsi serverless Anda berada
+  publish = "public"               # Folder yang berisi file frontend (index.html, css, js)
+
+[[redirects]]
+  from = "/ask"
+  to = "/.netlify/functions/ask"
+  status = 200

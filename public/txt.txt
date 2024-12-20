@@ -1,0 +1,19 @@
+<?php
+session_start();
+
+$valid_username = "user";
+$valid_password = "pass";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    if ($username === $valid_username && $password === $valid_password) {
+        $_SESSION['username'] = $username;
+        header("Location: welcome.php");
+    } else {
+        echo "<script>alert('Invalid username or password');</script>";
+        echo "<script>window.location.href='index.html';</script>";
+    }
+}
+?>
