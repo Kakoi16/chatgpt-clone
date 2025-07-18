@@ -1,7 +1,7 @@
 const axios = require('axios');
 
 // Ganti dengan API Key kamu
-const API_KEY = 'niga';
+const API_KEY = 'lia';
 
 async function aiBtc(message) {
     try {
